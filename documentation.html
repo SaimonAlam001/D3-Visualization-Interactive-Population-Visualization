@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Population Visualization - Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    img {
+      max-width: 100%;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+    }
+    iframe {
+      margin-top: 30px;
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Back to Visualization</a></p>
+  <h1>Interactive Population Visualization - Documentation</h1>
+
+  <h2>1. Project Overview</h2>
+  <p>
+    This project is an interactive D3.js visualization that allows users to explore global population data between 1960–2018.
+    It includes both country-level and non-country entity comparisons, split into two distinct sections for clarity.
+  </p>
+
+  <h2>2. Design Process</h2>
+  <p>
+    I started by selecting a reliable dataset of population figures from the World Bank, covering over 200 countries and various global entities.
+    I designed the visualization around two key views: countries and entity groups. Sketches and mockups guided the interface, helping structure dropdown logic, dynamic chart rendering, and data filtering.
+  </p>
+  <p>
+    Several iterations were made to filter non-country entities properly, organize dropdowns clearly, and ensure the user can toggle between bar and line charts fluidly.
+  </p>
+
+  <h2>3. Design Choices</h2>
+  <ul>
+    <li><strong>Dual Dropdown Filters:</strong> For both Countries and Entities — each with their own Year selector and data selector.</li>
+    <li><strong>Split Visual Sections:</strong> One view for Countries, another for Entities to keep context clean.</li>
+    <li><strong>Bar Chart:</strong> Displays top 10 values when “World” is selected.</li>
+    <li><strong>Line Chart:</strong> Shows trends over time when a specific country or entity is chosen.</li>
+    <li><strong>Tooltip + Transitions:</strong> Enhance user clarity and engagement.</li>
+  </ul>
+
+  <h2>4. How to Use</h2>
+  <p>
+    - Use the dropdowns in each section to choose a Year and a Country or Entity.<br />
+    - If "World" is selected, a bar chart shows the top 10 most populous entries.<br />
+    - Selecting any specific item displays a line chart showing its population over time.<br />
+    - Entity explanations are available below the charts for added context.
+  </p>
+
+  <h2>5. Key Insights</h2>
+  <ul>
+    <li><strong>China and India</strong> consistently top population charts from 1960–2018.</li>
+    <li><strong>The U.S.</strong> shows a steady growth trend without surpassing Asian giants.</li>
+    <li><strong>Entities like "Low & Middle Income"</strong> are larger in population than any one country due to their aggregated nature.</li>
+    <li><strong>Sub-Saharan Africa</strong> shows rapid growth from the 1990s onward.</li>
+  </ul>
+
+  <h3>Screenshots:</h3>
+  <img src="screenshots/top10_2018.png" alt="Top 10 Population Totals - 2018" />
+  <img src="screenshots/india_trend.png" alt="India Population Trend Line Chart" />
+  <img src="screenshots/usa_trend.png" alt="USA Population Trend" />
+
+  <h2>6. Walkthrough Video</h2>
+  <p>Watch a 2–4 minute narrated walkthrough of the visualization:</p>
+  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+
+  <h2>7. Project Info</h2>
+  <p>
+    Project by Saimon Alam — Final D3.js Visualization Project <br />
+    <a href="https://github.com/SaimonAlam001/population-visualization">GitHub Repository</a>
+  </p>
+</body>
+</html>

@@ -1,17 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Population Visualization</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Population Visualization</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f7f7f7;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+    .controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    select {
+      margin-left: 10px;
+      padding: 5px;
+      font-size: 1rem;
+    }
+    a {
+      text-align: center;
+      display: block;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Interactive Population Visualization</h1>
+  <h1>Interactive Population Visualization</h1>
+  <a href="documentation.html">View Project Documentation</a>
 
-    <script src="script.js"></script>
+  <!-- Countries View -->
+  <div id="countriesSection" class="section">
+    <h2>Countries View</h2>
+    <div class="controls" id="countryControls">
+      <label for="yearCountries">Year:</label>
+      <select id="yearCountries"></select>
 
+      <label for="countryDropdown">Country:</label>
+      <select id="countryDropdown"></select>
+    </div>
+    <!-- Chart will be appended here by D3 -->
+  </div>
+
+  <!-- Entities View -->
+  <div id="entitiesSection" class="section">
+    <h2>Entities View</h2>
+    <div class="controls" id="entityControls">
+      <label for="yearEntities">Year:</label>
+      <select id="yearEntities"></select>
+
+      <label for="entityDropdown">Entity:</label>
+      <select id="entityDropdown"></select>
+    </div>
+    <!-- Chart will be appended here by D3 -->
+  </div>
+  <hr>
+  <section id="entity-definitions" style="margin-top: 40px;">
+    <h2>What Do These Entities Mean?</h2>
+    <p>This section explains the aggregate entities you can explore in the Entities View:</p>
+    <ul>
+      <li><strong>Arab World:</strong> Countries in the Middle East and North Africa, defined by the Arab League.</li>
+      <li><strong>Caribbean small states:</strong> Island nations in the Caribbean with small populations and economies.</li>
+      <li><strong>Central African Republic:</strong> A low-income, landlocked country in Central Africa (also included here as an entity).</li>
+      <li><strong>Central Europe and the Baltics:</strong> Countries in Central and Eastern Europe including the Baltics.</li>
+      <li><strong>Early-demographic dividend:</strong> Countries with a growing working-age population and declining birth rate.</li>
+      <li><strong>East Asia & Pacific:</strong> A World Bank-defined region including China, Indonesia, and other Asia-Pacific countries.</li>
+      <li><strong>East Asia & Pacific (IDA & IBRD countries):</strong> Subset of East Asia & Pacific that qualify for World Bank assistance.</li>
+      <li><strong>East Asia & Pacific (excluding high income):</strong> Same region as above, excluding developed nations.</li>
+      <li><strong>Euro area:</strong> Countries that use the euro as their official currency.</li>
+      <li><strong>Europe & Central Asia:</strong> Covers a broad region from Western Europe to Central Asia.</li>
+      <li><strong>Europe & Central Asia (IDA & IBRD countries):</strong> Subset that qualifies for development loans/grants.</li>
+      <li><strong>Europe & Central Asia (excluding high income):</strong> Same region excluding wealthy nations.</li>
+      <li><strong>European Union:</strong> 27 member countries with a shared political and economic union.</li>
+      <li><strong>Fragile and conflict affected situations:</strong> Countries with ongoing conflicts or institutional instability.</li>
+      <li><strong>Heavily indebted poor countries (HIPC):</strong> Nations identified as needing debt relief from the IMF/World Bank.</li>
+      <li><strong>High income:</strong> Countries with gross national income (GNI) per capita over $13,845.</li>
+      <li><strong>IBRD only:</strong> Countries that qualify only for IBRD loans (middle-income & credit-worthy low-income).</li>
+      <li><strong>IDA & IBRD total:</strong> All countries eligible for either IDA or IBRD programs.</li>
+      <li><strong>IDA blend:</strong> Eligible for both IDA grants and IBRD loans due to transitional income status.</li>
+      <li><strong>IDA only:</strong> Low-income countries eligible for interest-free loans and grants only from IDA.</li>
+      <li><strong>IDA total:</strong> Combination of IDA only and blend countries.</li>
+      <li><strong>Late-demographic dividend:</strong> Countries nearing demographic maturity, still benefiting from age shifts.</li>
+      <li><strong>Latin America & Caribbean:</strong> Region of countries south of the U.S., including the Caribbean.</li>
+      <li><strong>Latin America & Caribbean (excluding high income):</strong> Same region excluding richer countries.</li>
+      <li><strong>Latin America & the Caribbean (IDA & IBRD countries):</strong> Subset qualifying for World Bank financial aid.</li>
+      <li><strong>Least developed countries: UN classification:</strong> Countries recognized by the UN as having the lowest indicators of development.</li>
+      <li><strong>Low & middle income:</strong> All countries with income levels below high-income threshold.</li>
+      <li><strong>Low income:</strong> Nations with a GNI per capita of $1,085 or less.</li>
+      <li><strong>Lower middle income:</strong> Countries with GNI per capita between $1,086 and $4,255.</li>
+      <li><strong>Middle East & North Africa:</strong> Geopolitical region including Egypt, Iran, Morocco, etc.</li>
+      <li><strong>Middle East & North Africa (IDA & IBRD countries):</strong> Subset that qualify for World Bank help.</li>
+      <li><strong>Middle East & North Africa (excluding high income):</strong> Same region minus rich nations like Qatar or UAE.</li>
+      <li><strong>Middle income:</strong> Includes lower and upper middle income groups.</li>
+      <li><strong>North America:</strong> Canada, United States, and sometimes Mexico.</li>
+      <li><strong>OECD members:</strong> Developed economies part of the Organization for Economic Co-operation and Development.</li>
+      <li><strong>Pacific island small states:</strong> Tiny island nations in the Pacific region with small populations.</li>
+      <li><strong>Post-demographic dividend:</strong> Countries where population aging has started, reducing the economic boost from demographics.</li>
+      <li><strong>Pre-demographic dividend:</strong> Countries with high fertility and growing young populations.</li>
+      <li><strong>South Asia:</strong> Region including India, Pakistan, Bangladesh, Nepal, and Sri Lanka.</li>
+      <li><strong>South Asia (IDA & IBRD):</strong> Subset qualifying for World Bank support.</li>
+      <li><strong>Sub-Saharan Africa:</strong> Countries in Africa south of the Sahara desert.</li>
+      <li><strong>Sub-Saharan Africa (IDA & IBRD countries):</strong> Subset of these countries eligible for development finance.</li>
+      <li><strong>Sub-Saharan Africa (excluding high income):</strong> Same region excluding high-income nations (if any).</li>
+      <li><strong>Upper middle income:</strong> Countries with GNI per capita between $4,256 and $13,845.</li>
+      <li><strong>World:</strong> The entire global population.</li>
+    </ul>
+  </section>
+  
+  <script src="script.js"></script>
 </body>
 </html>
