@@ -48,7 +48,7 @@
   <ul>
     <li><strong>Dual Dropdown Filters:</strong> For both Countries and Entities — each with their own Year selector and data selector.</li>
     <li><strong>Split Visual Sections:</strong> One view for Countries, another for Entities to keep context clean.</li>
-    <li><strong>Bar Chart:</strong> Displays top 10 values when “World” is selected.</li>
+    <li><strong>Bar Chart:</strong> Displays top 10 values when “Top 10” is selected.</li>
     <li><strong>Line Chart:</strong> Shows trends over time when a specific country or entity is chosen.</li>
     <li><strong>Tooltip + Transitions:</strong> Enhance user clarity and engagement.</li>
   </ul>
@@ -56,8 +56,8 @@
   <h2>4. How to Use</h2>
   <p>
     - Use the dropdowns in each section to choose a Year and a Country or Entity.<br />
-    - If "World" is selected, a bar chart shows the top 10 most populous entries.<br />
-    - Selecting any specific item displays a line chart showing its population over time.<br />
+    - If "Top 10" is selected, a bar chart shows the top 10 most populous entries.<br />
+    - Selecting any specific country or entity displays a line chart showing its population over time.<br />
     - Entity explanations are available below the charts for added context.
   </p>
 
@@ -67,12 +67,50 @@
     <li><strong>The U.S.</strong> shows a steady growth trend without surpassing Asian giants.</li>
     <li><strong>Entities like "Low & Middle Income"</strong> are larger in population than any one country due to their aggregated nature.</li>
     <li><strong>Sub-Saharan Africa</strong> shows rapid growth from the 1990s onward.</li>
+    <li><strong>Afghanistan</strong> experienced a visible population dip in the late 1980s and early 1990s, which aligns with periods of intense conflict and war — highlighting how global events can shape demographic trends.</li>
   </ul>
+  
 
-  <h3>Screenshots:</h3>
-  <img src="screenshots/top10_2018.png" alt="Top 10 Population Totals - 2018" />
-  <img src="screenshots/india_trend.png" alt="India Population Trend Line Chart" />
-  <img src="screenshots/usa_trend.png" alt="USA Population Trend" />
+  <h3>Screenshots (Evidence of Insights):</h3>
+
+<!-- Countries Section -->
+<p><strong>Countries View:</strong></p>
+<ul>
+  <li>
+    <strong>Top 10 Most Populated Countries (2018):</strong> China and India lead globally.
+    <br /><img src="screenshots/top10_countries_2018.png" alt="Top 10 Most Populated Countries in 2018" />
+  </li>
+  <li>
+    <strong>India Population Trend:</strong> Shows steady increase from 1960–2018.
+    <br /><img src="screenshots/india_trend.png" alt="India Population Trend Over Time" />
+  </li>
+  <li>
+    <strong>USA Population Trend:</strong> Growth evident, but less steep than Asian countries.
+    <br /><img src="screenshots/usa_trend.png" alt="USA Population Trend Over Time" />
+  </li>
+  <li>
+    <strong>Afghanistan Population Trend:</strong> Dip in the 1980s–90s, likely tied to conflict; then consistent growth.
+    <br /><img src="screenshots/afghanistan_trend.png" alt="Afghanistan Population Trend Over Time" />
+  </li>
+</ul>
+  
+  <!-- Entities Section -->
+  <p><strong>Entities View:</strong></p>
+  <ul>
+    <li>
+      <strong>Top 10 Most Populated Entities (2018):</strong> "Low & Middle Income" and regional aggregates surpass countries.
+      <br /><img src="screenshots/top10_entities_2018.png" alt="Top 10 Most Populated Entities in 2018" />
+    </li>
+    <li>
+      <strong>World Population Trend:</strong> Steady growth shown across 1960–2018.
+      <br /><img src="screenshots/world_entity_trend.png" alt="World Population Trend Over Time" />
+    </li>
+    <li>
+      <strong>Sub-Saharan Africa Trend:</strong> Rapid population increase from 1990s onward.
+      <br /><img src="screenshots/sub_saharan_trend.png" alt="Sub-Saharan Africa Population Trend" />
+    </li>
+  </ul>
+  
 
   <h2>6. Walkthrough Video</h2>
   <p>Watch a 2–4 minute narrated walkthrough of the visualization:</p>
@@ -81,7 +119,6 @@
   <h2>7. Project Info</h2>
   <p>
     Project by Saimon Alam — Final D3.js Visualization Project <br />
-    <a href="https://github.com/SaimonAlam001/population-visualization">GitHub Repository</a>
   </p>
 </body>
 </html>

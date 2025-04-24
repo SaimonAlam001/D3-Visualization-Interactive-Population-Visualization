@@ -1,7 +1,16 @@
 /Assignment 3
-   ├── index.html  (Main visualization page)
-   ├── documentation.html (Documentation page)
-   ├── style.css   (Styling for the visualization)
-   ├── script.js   (D3.js code)
-   ├── data/       (Folder for your dataset)
-   │     ├── countries_population.csv
+├── index.html
+├── documentation.html
+├── script.js
+├── style.css
+├── README.md
+├── data/
+│   └── countries_population.csv
+└── screenshots/
+    ├── top10_countries_2018.png
+    ├── india_trend.png
+    ├── usa_trend.png
+    ├── top10_entities_2018.png
+    └── world_entity_trend.png
+    └── sub_saharan_trend.png
+    └── afghanistan_trend.png
