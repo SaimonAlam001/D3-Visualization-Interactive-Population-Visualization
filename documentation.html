@@ -37,11 +37,22 @@
 
   <h2>2. Design Process</h2>
   <p>
-    I started by selecting a reliable dataset of population figures from the World Bank, covering over 200 countries and various global entities.
-    I designed the visualization around two key views: countries and entity groups. Sketches and mockups guided the interface, helping structure dropdown logic, dynamic chart rendering, and data filtering.
+    I began by selecting a dataset from <strong>Kaggle</strong>, which contains historical population data from 1960 to 2018. 
+    The dataset includes over 200 individual countries and numerous global or regional aggregate <em>entities</em> such as 
+    "Sub-Saharan Africa" or "Low & Middle Income".
   </p>
   <p>
-    Several iterations were made to filter non-country entities properly, organize dropdowns clearly, and ensure the user can toggle between bar and line charts fluidly.
+    To organize the information clearly, I structured the visualization into two primary sections: 
+    <strong>Countries View</strong> and <strong>Entities View</strong>. Initial wireframe sketches helped shape the interface layout, 
+    including dropdown logic, filtering behavior, and dynamic chart transitions.
+  </p>
+  <p>
+    A key challenge was properly separating true countries from grouped entity values. This required refining the dataset logic 
+    and dropdown content. Additionally, I added a <strong>"Top 10"</strong> selector option in both views to show the highest populated entries 
+    for a given year via a bar chart, while selecting any individual item displays a time-based line chart.
+  </p>
+  <p>
+    Iterative testing ensured smooth transitions, tooltip enhancements, and a responsive layout for both bar and line charts.
   </p>
 
   <h2>3. Design Choices</h2>
@@ -113,12 +124,12 @@
   
 
   <h2>6. Walkthrough Video</h2>
-  <p>Watch a 2–4 minute narrated walkthrough of the visualization:</p>
-  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+  <p>Watch a 4 minute walkthrough of the visualization:</p>
+  <iframe src="https://www.youtube.com/embed/yCtEfiztLQk" frameborder="0" allowfullscreen></iframe>
 
   <h2>7. Project Info</h2>
   <p>
-    Project by Saimon Alam — Final D3.js Visualization Project <br />
+    Project by Saimon Alam — Final Project <br />
   </p>
 </body>
 </html>
