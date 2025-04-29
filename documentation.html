@@ -31,8 +31,8 @@
 
   <h2>1. Project Overview</h2>
   <p>
-    This project is an interactive D3.js visualization that allows users to explore global population data between 1960–2018.
-    It includes both country-level and non-country entity comparisons, split into two distinct sections for clarity.
+    This project is an interactive D3.js visualization that allows users to explore global population data between 1960–2018. 
+    It includes both country and non country entity comparisons, separated into two categories for ease of understanding.
   </p>
 
   <h2>2. Design Process</h2>
@@ -43,16 +43,17 @@
   </p>
   <p>
     To organize the information clearly, I structured the visualization into two primary sections: 
-    <strong>Countries View</strong> and <strong>Entities View</strong>. Initial wireframe sketches helped shape the interface layout, 
+    <strong>Countries View</strong> and <strong>Entities View</strong>. Initial visualization helped shape the interface layout, 
     including dropdown logic, filtering behavior, and dynamic chart transitions.
+
   </p>
   <p>
     A key challenge was properly separating true countries from grouped entity values. This required refining the dataset logic 
-    and dropdown content. Additionally, I added a <strong>"Top 10"</strong> selector option in both views to show the highest populated entries 
-    for a given year via a bar chart, while selecting any individual item displays a time-based line chart.
+    and dropdown content. Additionally, I added a <strong>"Top 10"</strong> selector option in both views to show the highest 
+    populated entries for a given year via a bar chart, while selecting any individual item displays a time based line chart from 1960 to 2018.
   </p>
   <p>
-    Iterative testing ensured smooth transitions, tooltip enhancements, and a responsive layout for both bar and line charts.
+    Trial and error ensured smooth transitions, tooltip enhancements, and a responsive layout for both bar and line charts.
   </p>
 
   <h2>3. Design Choices</h2>
@@ -61,7 +62,7 @@
     <li><strong>Split Visual Sections:</strong> One view for Countries, another for Entities to keep context clean.</li>
     <li><strong>Bar Chart:</strong> Displays top 10 values when “Top 10” is selected.</li>
     <li><strong>Line Chart:</strong> Shows trends over time when a specific country or entity is chosen.</li>
-    <li><strong>Tooltip + Transitions:</strong> Enhance user clarity and engagement.</li>
+    <li><strong>Entity Meaning:</strong> Enhance user understanding of entities.</li>
   </ul>
 
   <h2>4. How to Use</h2>
@@ -75,10 +76,11 @@
   <h2>5. Key Insights</h2>
   <ul>
     <li><strong>China and India</strong> consistently top population charts from 1960–2018.</li>
-    <li><strong>The U.S.</strong> shows a steady growth trend without surpassing Asian giants.</li>
+    <li><strong>The U.S.</strong> shows a steady growth trend without surpassing the two Asian giants.</li>
     <li><strong>Entities like "Low & Middle Income"</strong> are larger in population than any one country due to their aggregated nature.</li>
     <li><strong>Sub-Saharan Africa</strong> shows rapid growth from the 1990s onward.</li>
-    <li><strong>Afghanistan</strong> experienced a visible population dip in the late 1980s and early 1990s, which aligns with periods of intense conflict and war — highlighting how global events can shape demographic trends.</li>
+    <li><strong>Afghanistan</strong> experienced a visible population dip in the late 1980s and early 1990s, which aligns with periods of intense conflict and war, such as the Soviet-Afghan war, highlighting how global events can shape demographic trends.
+</li>
   </ul>
   
 
